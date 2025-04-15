@@ -1,0 +1,30 @@
+heights = []
+student_count = 1
+
+while len(heights) < 4:
+    try:
+        height = float(input(f"Input the height of a student {student_count} in cm: "))
+        
+        if height < 0:
+            print("Height must be positive.")
+            continue
+        elif height > 200:
+            print("Height is greater than 200cm.")
+            continue
+        
+        heights.append(height)
+        student_count += 1
+        
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        continue
+
+print("End of input.")
+
+
+average_height = sum(heights) / len(heights)
+max_height = max(heights)
+
+
+print(f"The average height of these students is {average_height:.2f} cm.")
+print(f"The maximum height of these students is {max_height:.2f} cm.")
