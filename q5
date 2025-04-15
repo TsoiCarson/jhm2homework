@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt 
+import csv 
+  
+x = [] 
+y = [] 
+  
+with open('sales.csv','r') as csvfile: 
+    plots = csv.reader(csvfile, delimiter = ',') 
+      
+    for row in plots: 
+        x.append(row[1]) 
+        y.append(str(row[1])) 
+  
+plt.bar(x, y, color = 'g', width = 0.5) 
+plt.xlabel('Month') 
+plt.ylabel('Sales (in thousand dollars') 
+plt.title('Bar Chartof Ice-cream Sales') 
+plt.legend() 
+plt.show() 
+
