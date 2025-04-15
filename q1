@@ -1,5 +1,5 @@
-x = int(input("Enter a price:"))
-y = int(input("Enter another price:"))
+x = float(input("Enter a price:"))
+y = float(input("Enter another price:"))
 if x > y :
     print("The first price is larger than the second one")
 elif y > x :
